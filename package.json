@@ -1,7 +1,7 @@
 {
   "name": "react-pivot",
   "description": "React-Pivot is a data-grid component with pivot-table-like functionality for data display, filtering, and exploration.",
-  "version": "1.12.0",
+  "version": "1.21.0",
   "author": "David Guttman <david@guttman.io> (http://davidguttman.com/)",
   "browser": "index.jsx",
   "browserify": {
@@ -20,7 +20,7 @@
     "envify": "^3.2.0",
     "lodash": "^3.3.1",
     "react": ">=0.12.2",
-    "reactify": "^1.0.0",
+    "reactify": "^1.1.1",
     "wildemitter": "^1.0.1",
     "xtend": "^4.0.0"
   },
@@ -57,6 +57,6 @@
     "example-persist": "beefy example/persist.js",
     "dist": "npm run remove-dist && npm run build-standalone",
     "remove-dist": "rm dist/*.js",
-    "build-standalone": "NODE_ENV=production browserify lib/umd.js | uglifyjs -mc > dist/react-pivot-standalone-${npm_package_version}.min.js"
+    "build-standalone": "NODE_ENV=production browserify lib/umd.js | uglifyjs -mc --screw-ie8 > dist/react-pivot-standalone-${npm_package_version}.min.js"
   }
 }
